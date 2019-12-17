@@ -1,0 +1,71 @@
+CFX_PlugnPay Example:
+
+<CFX_PLUGNPAY 
+    VERSION="CFX2.0"
+    CLIENT="ColdFusion"
+    ACTION="TRANSAUTH"
+    PUBLISHER_NAME="pnpdemo"
+    PUBLISHER_EMAIL="myemail@mydomain.com"
+    ORDER_ID="1010"
+    CARD_AMOUNT="10.00"
+    CARD_TYPE="vs"
+    CARD_NUMBER="4111111111111111"
+    CARD_EXP="02/01"
+    CARD_NAME="John Smith"
+    CARD_ADDRESS1="123 Main Street"
+    CARD_ADDRESS2="Apt 2G"
+    CARD_ZIP="100001"
+    CARD_CITY="Hauppauge"
+    CARD_STATE="NY"
+    CARD_COUNTRY="US"
+    ACCT_CODE=""
+    SHIPNAME="ship to name"
+    ADDRESS1 = "123 Main Street"
+    ADDRESS2 = "Apt 2G"
+    CITY = "MyCity"
+    STATE ="MyState"
+    ZIP = "100001"
+    COUNTRY = "ShipCountry"
+    pnp_query="pnp"
+>
+<CFIF pnp.FinalStatus is "success">
+  <!--   Enter Code Here For Success  -->
+  SUCCESS
+<CFELSE>
+  <!--   Enter Code Here For Failure -->
+  FAILURE
+</CFIF>
+
+
+
+CFX_PlugnPay Syntax: 1.0 style messages
+<CFX_PLUGNPAY 
+    VERSION="CFX1.0"
+    CLIENT="ColdFusion"
+    ACTION="TRANSAUTH"
+    PUBLISHER_NAME="PlugnPay Username"
+    PUBLISHER_EMAIL="email address"
+    ORDER_ID="order_id"
+    CARD_AMOUNT="Amount to Be Charged"
+    CARD_TYPE="type"
+    CARD_NUMBER="Credit Card Number"
+    CARD_EXP="Credit Card Exp. Date"
+    CARD_NAME="billing name"
+    CARD_ADDRESS1="billing address line 1"
+    CARD_ADDRESS2="billing address line 2"
+    CARD_ZIP="zip"
+    CARD_CITY="city"
+    CARD_STATE="state"
+    CARD_COUNTRY="country"
+    ACCT_CODE="account_code"
+    SHIPNAME="ship to name"
+    ADDRESS1 = "ship to address line 1"
+    ADDRESS2 = "ship to address line 1"
+    CITY = "ship to city"
+    STATE ="ship to state"
+    ZIP = "ship to zip"
+    COUNTRY = "ship to country"
+    pnp_query="plugnpay"
+>
+
+
